@@ -176,4 +176,4 @@ char *pars_func(Node *temp_oper, char *string) {
   return string + i;
 }
 
-// int main() { printf("%d", smart_calc("ln(34)+log(87)", 0)); }
+// int main() { printf("%f", smart_calc("ln(34)+log(87)", 0)); }

@@ -14,18 +14,6 @@ void push(Node **head, double data, int type, int priority) {
   *head = temp;
 }
 
-void listprint(Node *elem) {
-  Node *p;
-  p = elem;
-  while (p) {
-    if (p->data != 0)
-      printf("%f\n", p->data);
-    else
-      printf("%d %d\n", p->type, p->priority);
-    p = p->next;
-  }
-  printf("\n\n");
-}
 
 void pop(Node **head) {
   if (!head) {
