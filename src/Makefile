@@ -53,13 +53,12 @@ gcov_report: $(TARGET)
 install: 
 	cd $(DIR) && cmake .
 	cd $(DIR) && make
-	mv $(DIR)/$(EXECUTABLE) ~/Desktop
 
 uninstall:
 	cd $(DIR) && rm -rf CMakeFiles $(EXECUTABLE)_autogen
 	cd $(DIR) && rm -rf .cmake .qtc_clangd Testing
 	cd $(DIR) && rm -f CMakeCache.txt CMakeCache.txt.prev *.cmake *.user
-	rm ~/Desktop/$(EXECUTABLE)
+	rm /$(DIR)/$(EXECUTABLE)
 
 
 dvi: dvi_clean
