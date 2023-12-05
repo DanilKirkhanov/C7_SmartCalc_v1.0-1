@@ -31,15 +31,15 @@ void pop(Node **head) {
   if (!head) {
     printf("Stack is empty");
     exit(1);
+  } else {
+    Node *tmp = *head;
+    *head = (*head)->next;
+    free(tmp);
   }
-  Node *tmp = *head;
-  *head = (*head)->next;
-  free(tmp);
 }
 
 int is_operator(int c) {
-  return (c == '+' || c == '-' || c == '*' || c == '/' || c == '^' ||
-          c == '(' || c == ')');
+  return (c == '+' || c == '-' || c == '*' || c == '/' || c == '^' || c == '(');
 }
 
 int is_letter(int c) {
