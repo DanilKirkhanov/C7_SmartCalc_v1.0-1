@@ -58,7 +58,7 @@ uninstall:
 	cd $(DIR) && rm -rf CMakeFiles $(EXECUTABLE)_autogen
 	cd $(DIR) && rm -rf .cmake .qtc_clangd Testing
 	cd $(DIR) && rm -f CMakeCache.txt CMakeCache.txt.prev *.cmake *.user
-	rm /$(DIR)/$(EXECUTABLE)
+	cd $(DIR) && rm -rf $(EXECUTABLE)
 
 
 dvi: dvi_clean
@@ -70,8 +70,8 @@ dvi_clean:
 
 dist: install
 	mkdir -p ./$(ARCHIVE_DIR)
-	cp ~/Desktop/$(EXECUTABLE) ./$(ARCHIVE_DIR)
-	tar -czf ~/Desktop/$(EXECUTABLE).tar.gz ./$(ARCHIVE_DIR)
+	cp $(DIR)/$(EXECUTABLE) ./$(ARCHIVE_DIR)
+	tar -czf $(DIR)/$(EXECUTABLE).tar.gz ./$(ARCHIVE_DIR)
 	rm -rf $(ARCHIVE_DIR)
 
 
